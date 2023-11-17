@@ -1,13 +1,11 @@
 {
-  "name": "practica1",
+  "name": "default project web",
   "version": "1.0.0",
-  "description": "Practica diseño figma",
+  "description": "default project web",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/main.sass css/main-sass.css --watch",
-    "minify-css": "postcss css/main.css > css/main.min.css"
   },
   "author": "Alejandro Pérez-Moneo Nieto",
   "license": "ISC",
