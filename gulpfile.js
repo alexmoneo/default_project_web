@@ -17,10 +17,10 @@ let isDesarrollo = true;
 //estilos en scss
 gulp.task('styles-scss', () => {
     return gulp.src('assets/scss/**/*.scss')
-        .pipe(gulpif(isProduction, sourcemaps.init())) // conditional
+        .pipe(gulpif(isDesarrollo, sourcemaps.init())) // conditional
         .pipe(sass().on('error', sass.logError))
         .pipe(sass({errLogToConsole: true}))
-        .pipe(gulpif(isProduction, sourcemaps.write())) // conditional
+        .pipe(gulpif(isDesarrollo, sourcemaps.write())) // conditional
         .pipe(gulp.dest('assets/css'))
         .pipe(browserSync.stream());
 });
@@ -53,7 +53,7 @@ gulp.task('serve',  function() {
         logLevel: "info",
         browser: ["chrome"],
         proxy: "localhost:80",
-        startPath: "/practica1-extend/"
+        startPath: "/DIW/proyecto"
     });
 
     gulp.watch('assets/scss/**/*.scss', gulp.series('scss'));
